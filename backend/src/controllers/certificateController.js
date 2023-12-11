@@ -1,5 +1,4 @@
-// You might need additional imports depending on your implementation
-// For instance, import your certificate model here
+const CertificateModel = require('../models/certificateModel');
 
 exports.createCertificate = async (req, res) => {
     try {

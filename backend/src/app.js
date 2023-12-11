@@ -1,5 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+const setupSwagger = require('../config/swagger');
+
 const app = express();
 app.use(cors());
 
@@ -16,6 +18,9 @@ app.use((req, res, next) => {
     );
     next();
 });
+
+// Swagger Documentation setup
+setupSwagger(app);
 
 // Certificate routes
 app.use('/certificates', certificateRoutes);

@@ -11,7 +11,7 @@ function CertificateForm({ onCertificateCreate }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3000/certificates', formData);
+            await axios.post('http://localhost:3001/certificates', formData);
             setFormData({ name: '', issuer: '', dateIssued: '' }); // Clear the form
             onCertificateCreate(); // Update the list in parent component
         } catch (error) {

@@ -8,7 +8,7 @@ function App() {
 
     const fetchCertificates = useCallback(async () => {
         try {
-            const response = await axios.get('http://localhost:3000/certificates');
+            const response = await axios.get('http://localhost:3001/certificates');
             setCertificates(response.data);
         } catch (error) {
             console.error('Error fetching certificates:', error);

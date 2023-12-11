@@ -1,5 +1,20 @@
 # Certificate Management System
 
+## Project Structure
+
+- `backend/`: Contains all backend code.
+  - `controllers/`: Business logic for handling API requests.
+  - `models/`: Database models.
+  - `routes/`: API route definitions.
+  - `config/`: Configuration files, including Swagger setup.
+  - `app.js`: Entry point for the backend server.
+- `frontend/`: Contains all frontend code.
+  - `src/`: Source files for the React application.
+    - `components/`: React components.
+    - `App.js`: Main application component.
+    - `index.js`: Entry point for the React application.
+- `README.md`: Documentation for the project.
+
 ## Setup and Run Guide
 
 This guide will take you through the steps to set up and run the Certificate Management System on your local machine.

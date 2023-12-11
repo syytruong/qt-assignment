@@ -15,6 +15,30 @@
     - `index.js`: Entry point for the React application.
 - `README.md`: Documentation for the project.
 
+This project uses SQLite as its database. Follow these steps to set up and initialize the database:
+
+1. **Database File**: The application is configured to use an SQLite database. The database file is automatically created when you first run the application. By default, the database file is named `certificates.db` and located in the `backend` directory.
+
+2. **Database Schema**: To set up the database schema, you need to run the database initialization script. This script creates the necessary tables for the application.
+
+    Navigate to the backend directory:
+
+    ```bash
+    cd backend
+    ```
+
+    Run the initialization script:
+
+    ```bash
+    node src/models/setupDb.js
+    ```
+
+    This script will create the necessary tables in your SQLite database. You only need to run this script once.
+
+3. **Verifying Database Setup**: After running the setup script, you can verify the creation of the database file and tables using any SQLite browser or command-line tool.
+
+4. **Database Configuration**: The application is configured to connect to this SQLite database by default. If you have custom configurations or a different database, update the database connection settings in the backend application.
+
 ## Setup and Run Guide
 
 This guide will take you through the steps to set up and run the Certificate Management System on your local machine.

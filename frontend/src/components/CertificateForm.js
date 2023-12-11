@@ -12,7 +12,7 @@ function CertificateForm({ onCertificateCreate }) {
         e.preventDefault();
         try {
             await axios.post('http://localhost:3001/certificates', formData);
-            setFormData({ name: '', issuer: '', dateIssued: '' }); // Clear the form
+            setFormData({ name: '', issuer: '', dateIssued: '' });
             onCertificateCreate(); // Update the list in parent component
         } catch (error) {
             console.error('Error creating certificate:', error);
@@ -26,20 +26,20 @@ function CertificateForm({ onCertificateCreate }) {
                 name="name" 
                 placeholder="Name" 
                 value={formData.name} 
-                onChange={handleChange} // Attach handleChange here
+                onChange={handleChange}
             />
             <input 
                 type="text" 
                 name="issuer" 
                 placeholder="Issuer" 
                 value={formData.issuer} 
-                onChange={handleChange} // And here
+                onChange={handleChange}
             />
             <input 
                 type="date" 
                 name="dateIssued" 
                 value={formData.dateIssued} 
-                onChange={handleChange} // And also here
+                onChange={handleChange}
             />
             <button type="submit">Create Certificate</button>
         </form>

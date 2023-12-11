@@ -24,7 +24,7 @@ function App() {
         <div>
             <h1>Certificate Management System</h1>
             <CertificateForm onCertificateCreate={fetchCertificates} />
-            <CertificateList certificates={certificates} />
+            <CertificateList certificates={certificates} onCertificateDelete={fetchCertificates} />
         </div>
     );
 }

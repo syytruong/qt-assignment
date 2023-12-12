@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import CertificateForm from './components/CertificateForm';
 import CertificateList from './components/CertificateList';
 
@@ -11,7 +13,7 @@ function App() {
             const response = await axios.get('http://localhost:3001/certificates');
             setCertificates(response.data);
         } catch (error) {
-            console.error('Error fetching certificates:', error);
+            toast.error("Error fetching certificates");
         }
     }, []);
 
@@ -21,10 +23,11 @@ function App() {
     }, [fetchCertificates]);
 
     return (
-        <div>
-            <h1>Certificate Management System</h1>
+        <div className='h-full pt-[10vh] flex flex-col items-center gap-8'>
+            <h1 className='font-semibold text-4xl'>Certificates Management System</h1>
             <CertificateForm onCertificateCreate={fetchCertificates} />
             <CertificateList certificates={certificates} onCertificateDelete={fetchCertificates} />
+            <ToastContainer />
         </div>
     );
 }
